@@ -64,42 +64,43 @@
  *  @brief I2C BSP API
  *  @{
  */
-#define BSP_I2C_SCL           (GPIO_NUM_2)
-#define BSP_I2C_SDA           (GPIO_NUM_1)
+#define BSP_I2C_SCL           (GPIO_NUM_18)
+#define BSP_I2C_SDA           (GPIO_NUM_17)
 /** @} */ // end of i2c
 
 /** @defgroup g03_audio Audio
  *  @brief Audio BSP API
  *  @{
  */
-#define BSP_I2S0_SCLK         (GPIO_NUM_40)
-#define BSP_I2S0_MCLK         (GPIO_NUM_42)
-#define BSP_I2S0_LCLK         (GPIO_NUM_41)
-#define BSP_I2S0_DOUT         (GPIO_NUM_39)
-#define BSP_I2S0_DSIN         (GPIO_NUM_NC)
+#define BSP_I2S0_SCLK         (GPIO_NUM_9)
+#define BSP_I2S0_MCLK         (GPIO_NUM_16)
+#define BSP_I2S0_LCLK         (GPIO_NUM_45)
+#define BSP_I2S0_DOUT         (GPIO_NUM_8)
+#define BSP_I2S0_DSIN         (GPIO_NUM_10)
 
-#define BSP_I2S1_SCLK         (GPIO_NUM_10)
-#define BSP_I2S1_MCLK         (GPIO_NUM_20)
-#define BSP_I2S1_LCLK         (GPIO_NUM_9)
+#define BSP_I2S1_SCLK         (GPIO_NUM_NC)
+#define BSP_I2S1_MCLK         (GPIO_NUM_NC)
+#define BSP_I2S1_LCLK         (GPIO_NUM_NC)
 #define BSP_I2S1_DOUT         (GPIO_NUM_NC)
-#define BSP_I2S1_DSIN         (GPIO_NUM_11)
+#define BSP_I2S1_DSIN         (GPIO_NUM_NC)
 
-#define BSP_POWER_AMP_IO      (GPIO_NUM_38)
+#define BSP_POWER_AMP_IO      (GPIO_NUM_48)
 /** @} */ // end of audio
 
 /** @defgroup g06_led Leds
  *  @brief Leds BSP API
  *  @{
  */
-#define BSP_LED_RGB_GPIO      (GPIO_NUM_19)
-#define BSP_LED_NUM           (12)
+#define BSP_LED_RGB_GPIO      (GPIO_NUM_38)
+#define BSP_LED_NUM           (1)
 /** @} */ // end of leds
 
 /** @defgroup g05_buttons Buttons
  *  @brief Buttons BSP API
  *  @{
  */
-#define BSP_BUTTONS_IO        (GPIO_NUM_8) // All 6 buttons mapped to this GPIO
+#define BSP_BUTTON_VOLDOWN_GPIO   (GPIO_NUM_5)
+#define BSP_BUTTON_VOLUP_GPIO     (GPIO_NUM_6)
 /** @} */ // end of buttons
 
 /** @defgroup g02_storage SD Card and SPIFFS
@@ -107,16 +108,16 @@
  *  @{
  */
 /* uSD card MMC */
-#define BSP_SD_D0             (GPIO_NUM_16)
-#define BSP_SD_D3             (GPIO_NUM_15)
-#define BSP_SD_CMD            (GPIO_NUM_17)
-#define BSP_SD_CLK            (GPIO_NUM_18)
+// #define BSP_SD_D0             (GPIO_NUM_16)
+// #define BSP_SD_D3             (GPIO_NUM_15)
+// #define BSP_SD_CMD            (GPIO_NUM_17)
+// #define BSP_SD_CLK            (GPIO_NUM_18)
 
 /* uSD card SPI */
-#define BSP_SD_SPI_MISO       (GPIO_NUM_16)
-#define BSP_SD_SPI_CS         (GPIO_NUM_15)
-#define BSP_SD_SPI_MOSI       (GPIO_NUM_17)
-#define BSP_SD_SPI_CLK        (GPIO_NUM_18)
+// #define BSP_SD_SPI_MISO       (GPIO_NUM_16)
+// #define BSP_SD_SPI_CS         (GPIO_NUM_15)
+// #define BSP_SD_SPI_MOSI       (GPIO_NUM_17)
+// #define BSP_SD_SPI_CLK        (GPIO_NUM_18)
 /** @} */ // end of storage
 
 #ifdef __cplusplus
@@ -154,11 +155,7 @@ typedef enum {
  * \endcode
  **************************************************************************************************/
 typedef enum {
-    BSP_BUTTON_REC = 0,
-    BSP_BUTTON_MODE,
-    BSP_BUTTON_PLAY,
-    BSP_BUTTON_SET,
-    BSP_BUTTON_VOLDOWN,
+    BSP_BUTTON_VOLDOWN = 0,
     BSP_BUTTON_VOLUP,
     BSP_BUTTON_NUM,
 } bsp_button_t;
