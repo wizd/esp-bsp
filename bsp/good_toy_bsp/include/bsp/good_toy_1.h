@@ -6,7 +6,7 @@
 
 /**
  * @file
- * @brief ESP BSP: ESP32-S3-KORVO-1
+ * @brief ESP BSP: GOOD-TOY-1
  */
 
 #pragma once
@@ -34,7 +34,7 @@
  *  @brief BSP Board Name
  *  @{
  */
-#define BSP_BOARD_ESP32_S3_KORVO_1
+#define BSP_BOARD_GOOD_TOY_1
 /** @} */ // end of boardname
 
 /**************************************************************************************************
@@ -51,13 +51,13 @@
 #define BSP_CAPS_AUDIO          1
 #define BSP_CAPS_AUDIO_SPEAKER  1
 #define BSP_CAPS_AUDIO_MIC      1
-#define BSP_CAPS_SDCARD         1
+#define BSP_CAPS_SDCARD         0
 #define BSP_CAPS_IMU            0
 #define BSP_CAPS_LED            1
 /** @} */ // end of capabilities
 
 /**************************************************************************************************
- *  ESP32-S3-Korvo-1 pinout
+ *  GOOD-TOY-1 pinout
  **************************************************************************************************/
 
 /** @defgroup g01_i2c I2C

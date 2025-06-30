@@ -5,4 +5,4 @@
  */
 
 #pragma once
-#include "bsp/esp32_s3_korvo_1.h"
+#include "bsp/good_toy_1.h"
